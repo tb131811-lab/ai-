@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 서비스 리스트</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="top-nav" aria-label="주요 메뉴">
+    <a class="brand" href="#">PortalAI</a>
+    <div class="nav-links" aria-label="빠른 이동">
+      <a href="#serviceList">홈</a>
+      <a href="#categoryQuick">카테고리</a>
+      <a href="#comparePanel">비교표</a>
+    </div>
+    <div class="nav-actions">
+      <a class="nav-pill" href="#serviceList">AI 도구 확인</a>
+      <span class="lang-toggle"><strong>한국어</strong><span>EN</span></span>
+    </div>
+  </nav>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div>
+        <p class="edition-badge">2026 최신판</p>
+        <p class="eyebrow">용도별 AI 툴 가이드</p>
+        <h1><span>용도별 AI 툴 가이드</span><strong>AI 툴 모음</strong></h1>
+        <p class="lead">글쓰기, 이미지 생성, 영상 제작, 코딩, 리서치, 자동화까지. 일상·업무·학습에 바로 쓰기 좋은 AI 도구를 용도별로 찾고 비교하세요.</p>
+        <div class="hero-points" aria-label="추천 포인트">
+          <span>용도별 추천</span>
+          <span>목적별 빠른 탐색</span>
+          <span>가격·난이도 비교</span>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="robot-face">
+          <span></span>
+          <span></span>
+        </div>
+        <p>일상·업무·학습<br>모두 활용 가능!</p>
+      </div>
+      <a class="skip-link" href="#serviceList">서비스 목록으로 이동</a>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section id="categoryQuick" class="quick-panel" aria-label="추천 목적별 빠른 선택">
+      <p class="updated-copy">리스트 업데이트: 2026년 10월 7일</p>
+      <h2>무엇을 하고 싶으세요?</h2>
+      <div id="categoryChips" class="category-chips" aria-label="분야 바로가기"></div>
+    </section>
+
+    <section class="tip-strip" aria-label="무료 AI 활용 팁">
+      <article>
+        <h2>무료라서 좋은 점!</h2>
+        <p>비용 부담 없이 바로 사용 가능하고, 다양한 작업을 AI가 빠르게 도와줍니다.</p>
+      </article>
+      <article>
+        <h2>2026 AI 트렌드 키워드</h2>
+        <div class="trend-tags">
+          <span>#생성형</span><span>#자동화</span><span>#멀티모달</span><span>#창의성</span><span>#협업</span><span>#AI비서</span>
+        </div>
+      </article>
+      <article>
+        <h2>활용 꿀팁!</h2>
+        <p>무료 플랜으로 먼저 써보고, 자주 쓰는 도구만 유료 전환하세요.</p>
+      </article>
+    </section>
+
+    <section class="controls" aria-label="검색 및 필터">
+      <div class="search-row">
+        <label class="field search-field" for="searchInput">
+          <span>검색</span>
+          <input id="searchInput" type="search" placeholder="서비스명, 태그, 추천 용도 검색" autocomplete="off">
+        </label>
+
+        <label class="field sort-field" for="sortSelect">
+          <span>정렬</span>
+          <select id="sortSelect">
+            <option value="rating">추천순</option>
+            <option value="price">가격순</option>
+            <option value="name">이름순</option>
+            <option value="updated">업데이트순</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="filter-grid">
+        <label class="field" for="categoryFilter">
+          <span>분야</span>
+          <select id="categoryFilter">
+            <option value="">전체 분야</option>
+          </select>
+        </label>
+
+        <label class="field" for="pricingFilter">
+          <span>무료/유료</span>
+          <select id="pricingFilter">
+            <option value="">전체</option>
+            <option value="무료">무료</option>
+            <option value="부분 무료">부분 무료</option>
+            <option value="유료">유료</option>
+          </select>
+        </label>
+
+        <label class="field" for="priceFilter">
+          <span>가격대</span>
+          <select id="priceFilter">
+            <option value="">전체 가격</option>
+            <option value="free">무료</option>
+            <option value="under20">$20 미만</option>
+            <option value="20to50">$20-$50</option>
+            <option value="over50">$50 이상</option>
+          </select>
+        </label>
+
+        <label class="field" for="difficultyFilter">
+          <span>난이도</span>
+          <select id="difficultyFilter">
+            <option value="">전체</option>
+            <option value="쉬움">쉬움</option>
+            <option value="보통">보통</option>
+            <option value="어려움">어려움</option>
+          </select>
+        </label>
+
+        <label class="field" for="koreanFilter">
+          <span>한국어 지원</span>
+          <select id="koreanFilter">
+            <option value="">전체</option>
+            <option value="true">지원</option>
+            <option value="false">미지원/제한적</option>
+          </select>
+        </label>
+      </div>
+    </section>
+
+    <section class="list-heading" aria-live="polite">
+      <h2>서비스 목록</h2>
+      <p><strong id="resultCount">0</strong>개의 서비스 표시 중</p>
+    </section>
+
+    <section id="serviceList" class="service-grid" aria-label="AI 서비스 카드 목록"></section>
+    <p id="emptyMessage" class="empty-message" hidden>조건에 맞는 AI 서비스가 없습니다.</p>
+
+    <section id="comparePanel" class="compare-panel" aria-label="AI 서비스 비교">
+      <div class="compare-header">
+        <div>
+          <h2>비교 목록</h2>
+          <p id="compareCount">선택된 서비스 0개</p>
+        </div>
+        <button id="clearCompareBtn" class="button button-ghost" type="button">전체 초기화</button>
+      </div>
+      <div id="compareTableWrap" class="table-wrap"></div>
+    </section>
+  </main>
+
+  <div id="detailModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-backdrop" data-close-modal></div>
+    <article class="modal-card">
+      <button class="modal-close" type="button" aria-label="상세 정보 닫기" data-close-modal>&times;</button>
+      <div id="modalContent"></div>
+    </article>
+  </div>
+
+  <script src="js/data-expanded.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
